@@ -12,6 +12,8 @@
 
 ## API
 
+### HTML file
+
 ```html
 <a href="image.jpg" title="alt" [data-lightbox="gallery-name"]>Open Picture</a>
 ```
@@ -20,9 +22,16 @@
 * title - specify the image alt
 * data-lightbox - optional, specify images connected to one gallery
 
+### js
 
 ```js
 new Litebox(element);
+```
+
+### Stylus file
+
+```styl
+litebox()
 ```
 
 * element - target element to generate and open litebox from, usually
