@@ -168,9 +168,11 @@ Litebox.prototype._createHTML = function() {
             }
             
             html +=     '</ul></div>';
-            html +=     '<div class="litebox-item-caption">';
-            html +=         '<div class="litebox-item-caption-content">' + component.item[i].title + '</div>';
-            html +=     '</div>';
+            if (component.options.useCaption) {
+                html +=     '<div class="litebox-item-caption">';
+                html +=         '<div class="litebox-item-caption-content">' + component.item[i].title + '</div>';
+                html +=     '</div>';
+            }
             html += '</div>';
         }
     } else {
@@ -178,9 +180,11 @@ Litebox.prototype._createHTML = function() {
         html +=         '<div class="litebox-item-content">';
         html +=             '<img src="' + component.item[0].url + '" alt="' + component.item[0].title + '">';
         html +=         '</div>';
-        html +=         '<div class="litebox-item-caption">';
-        html +=             '<div class="litebox-item-caption-content">' + component.item[0].title + '</div>';
-        html +=         '</div>';
+        if (component.options.useCaption) {
+            html +=         '<div class="litebox-item-caption">';
+            html +=             '<div class="litebox-item-caption-content">' + component.item[0].title + '</div>';
+            html +=         '</div>';
+        }
         html +=     '</div>';
     }
     

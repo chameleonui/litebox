@@ -1,4 +1,4 @@
-# Litebox - v0.0.1
+# Litebox - v0.0.2
 
   just a simple umpa lupma litebox for showing pictures or galleries, with styles written in stylus
 

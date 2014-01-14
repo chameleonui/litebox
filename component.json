@@ -2,7 +2,7 @@
   "name": "litebox",
   "repo": "chameleonui/litebox",
   "description": "just a simple umpa lupma litebox for showing pictures or galleries",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "dependencies": {
     "chameleonui/css3": "*",

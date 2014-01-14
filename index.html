@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Nav – Chameleon UI</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="example.css" />
+    <link rel="stylesheet" href="build/build.css" />
     <style>
         html { 
             font: 400 1em/1.5 "Georgia", serif;
@@ -143,9 +143,7 @@
     <script src="build/build.js"></script>
     <script>
         var Litebox = require('litebox');
-        var pic = new Litebox('.lightbox-container > a', {
-            useCaption: true
-        });
+        var pic = new Litebox('.lightbox-container > a', {});
     </script>
 </body>
 </html>
