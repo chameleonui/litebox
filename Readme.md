@@ -28,13 +28,14 @@
 new Litebox(element);
 ```
 
+* element - target element to generate and open litebox from, usually
+
 ### Stylus file
 
 ```styl
 litebox()
 ```
 
-* element - target element to generate and open litebox from, usually
 
 
 ## Author(s)
