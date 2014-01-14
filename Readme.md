@@ -15,7 +15,13 @@
 ### HTML file
 
 ```html
-<a href="image.jpg" title="alt" [data-lightbox="gallery-name"]>Open Picture</a>
+<!-- single image -->
+<a href="image.jpg" title="alt">Open Picture</a>
+
+<!-- Gallery set -->
+<a href="image.jpg" title="alt" data-lightbox="gallery-name">Open Gallery</a>
+<a href="image.jpg" title="alt" data-lightbox="gallery-name">Open Gallery</a>
+<a href="image.jpg" title="alt" data-lightbox="gallery-name">Open Gallery</a>
 ```
 
 * href - specify the target image url
