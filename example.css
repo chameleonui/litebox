@@ -1,0 +1,227 @@
+/**
+ *
+ * Litebox example
+ *
+ */
+.litebox {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 62.25em;
+  height: 100%;
+  margin: 0;
+  padding: 1em 0;
+  z-index: 10000;
+  font-size : 16px;
+}
+.litebox .litebox-shadow {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  filter : aplha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.litebox .litebox-modal {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 50em;
+  height: auto;
+  margin: 0 auto;
+  filter : aplha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.litebox .litebox-modal .litebox-modal-close {
+  display: block;
+  position: absolute;
+  top: 0.625em;
+  right: 0.625em;
+  width: 2.5em;
+  height: 2.5em;
+  text-decoration: none;
+  outline: 0 none;
+  border: 0 none;
+  margin: -1.25em -1.25em 0 0;
+  cursor: pointer;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAzBJREFUeNrUmb1u4kAUhQcbhKIQwQaEKEDKNiiioky3pKaJlAdhG+qIOs3SZct9gEjbUFGEvAE9xQZBQcN/foSiwM6xxuhmdozH2KDlSCMEGN8vd+4cz52E2BYql8tn/KXExzc+imKo1BbjkY9Wo9F48hor5BEMUBU+rth2+s1HnYO2AgUUYDcia0EIgDUd0JALWEKAfZe/m8/n7OXlhS0WC+tVpePjYxaNRq3Xk5MT1SU/BOjEM6CAe6D19fHxwabTKRsOh+z9/d1TyiKRCEsmkywejzPTNOU6vXSCDDnAFQVcgmZsMBh4BlOBZjIZOaMTAdl2BRSZ+0PhADYajViQOj09tUAlyK9yJg2HaU3YU9rtdgOHg3BP3BsxhKzYgkENKBbEuub6/b7jAghCuDdiEBUFw1qmZCV3dFpnsxnbtVDTyGIsFrM/usjn84+dTudJzuANXRC7mNZN042YKhaDZK9k1x2yt0m3t7fW0JXO9YhJ6rEkmFhYfFCxv4HPbbISBLq+vl6/r1arrnA61yMmYmN1E6aWKR78d3RhLJdLrWCFQoFls1nWbDYDuR5PJZi50DmvxV8Gfb6iDrwaMQBU0yfD6S4YqRZLJqes2NYyHo/Z29ub4w3wlyMDyASVnBknuPv7e9eSCIfDdEVPwtT3kGI32QFkAPp+WzgFQ/EToK4p60BuA6dgKBrbehcCIrCbvMCpZPgxWDdIv3C+AfchX4BuVuJkQXsB1PU5v5CG2HKvewg/cKg5VU16gZQY2mEBaFkNGhw3q9E1YScLcls0YKCAeJJ8sfvc1Wq1cQ+oC6f7xFEplUpRyLohelRLaGTQ1HiRk5Xo+qTcUEnNVMvkO9cJzyKm+NzqokIh9vz8rPUsdvM5r9en02l2dHS0PoXgDdRPez9Yt6cZfeumvpcG0DFh3euRPcQmqn9qO/m+8MHeemHL0+v19mrIuVyOTi8Omi5lH6zRWiQ7250LsaTaq/3T1aGL4rWInvQC77Ene3199X2SoON7qFN6XoPac3qS1Khx44e65h0QXJtm7yCOPg7v8Oggjt8O4gDzII6AHUD/v0N0BegZ29O/If4KMABlcvbRBalsMQAAAABJRU5ErkJggg==") 50% 50% no-repeat;
+  z-index: 1000;
+}
+.litebox .litebox-modal .litebox-item {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  min-height: 3em;
+  background-color: #fff;
+  border: 0.625em solid #fff;
+  z-index: 1;
+}
+.litebox .litebox-modal .litebox-item.is-off {
+  display: none;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: 0 none;
+  outline: 0 none;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  filter : aplha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-left {
+  left: 0;
+  right: 55%;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAASFJREFUeNrsmM0NgzAMhd0yARs0V06dggVYoN0BpsgQZQEOnYZjLgzABjSWiMSFnxjspFIsRYmAoE/BIc8PQCCUUh9slLmZBJztXrY98zx/jOP4jQZwAefCGzKTgKuqCoqigL7vgbqSHDk3YavrenKBY3edmpNscFFA7sEFhTwK5wt559gQWmuIJnxXTvQTJ7gEl+ASXIJLcNecxZyxqqhR8aLyRQWMSngYBijLcvNleB+fu1I5b0r+GCB3a5LQkIeKppCQh6u6UJBeZWcISO+6WBqSVLhLQpKdBSnIU9aHBORpb4Yb8pKz2Bjztl2L467roGmaOA/2qK2PvzCPOOy3m5SB6fJzjnbO23CAKxawFxy7R738BVHgpHOStCF+AgwApBX7bQKP8ygAAAAASUVORK5CYII=");
+  background-position: -5% center;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-left:hover {
+  background-position: 5% center;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-right {
+  left: 55%;
+  right: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAR1JREFUeNrsmM0NgzAMhU0zARuUK6dOwQIsQHeAKTJEu0AOnSZHLgzABhRXjYQqFRITnFTNkyL+ouhT5GcHAxBUFMUNBzBIUODmSzOPS57n53EcH9EALuCMDocUFLi6rqEsS9BaA9dO2sTchKNt28kI7817rpi0hosCcgsuKKQt3NGQJ18LSSlf5nmr8QX51cXoSnQnuhTdOgwDVFW1uhh+x3k+3b2aZmKA3MyDoSGtEnVISOtKEgrSqRaHgHQ+zXBDCkrgckIKqv25IMWeJMoBuQuQA9JbLY5Wrqce1uNZgktwCS7BJbgE568Wd10HSinzeO/7/vrfrY+faB7F0H7LqA1MFEfMZa47+dECPtwQ5P9iVrcSY5LFEE8BBgCyWvtt+7ZDdgAAAABJRU5ErkJggg==");
+  background-position: 105% center;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-right:hover {
+  background-position: 95% center;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers:hover {
+  filter : aplha(opacity=100);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-counter {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-counter > ul {
+  display: block;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0.625em 0 0 0;
+  width: auto;
+  text-align: center;
+  line-height: 0.5;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-counter > ul > li {
+  display: inline-block;
+  margin: 0 0.25em;
+  padding: 0;
+  width: 0.7em;
+  height: 0.7em;
+  list-style: none;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: #c8c8c8;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-counter > ul > li.is-active {
+  background: #e63939;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-caption {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.litebox .litebox-modal .litebox-item .litebox-item-caption > .litebox-item-caption-content {
+  display: block;
+  padding: 0.625em 0 0 0;
+  margin: 0;
+}
+.litebox.show-chevrons .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers {
+  filter : aplha(opacity=100);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+.litebox.show-chevrons .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-left {
+  background-position: 5% center;
+}
+.litebox.show-chevrons .litebox-modal .litebox-item .litebox-item-content a.gallery-controllers.chevron-right {
+  background-position: 95% center;
+}
+.litebox.is-shown {
+  display: block;
+}
+.litebox.is-shown .litebox-shadow {
+  filter : aplha(opacity=50);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=50)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+}
+.litebox.is-shown .litebox-modal {
+  filter : aplha(opacity=100);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=100)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1;
+}
+.litebox.is-hidden {
+  display: block;
+}
+.litebox.is-hidden .litebox-shadow {
+  display: block;
+  filter : aplha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+.litebox.is-hidden .litebox-modal {
+  filter : aplha(opacity=0);
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=0)';
+  filter : progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}

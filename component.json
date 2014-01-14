@@ -1,0 +1,21 @@
+{
+  "name": "litebox",
+  "repo": "chameleonui/litebox",
+  "description": "just a simple umpa lupma litebox for showing pictures or galleries",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "chameleonui/css3": "*",
+    "component/jquery": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "litebox.styl"
+  ],
+  "remotes": []
+}
